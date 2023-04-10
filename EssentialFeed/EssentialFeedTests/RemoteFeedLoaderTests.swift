@@ -28,7 +28,6 @@ protocol HTTPClient {
 class RemoteFeedLoaderTests: XCTestCase {
     
     func test_init_doesNotRequestedDataFromURL() {
-        let url = URL(string: "https://a-given-url.com")!
         // create FeedLoader with a client
         let (_, client) = makeSUT()
     
