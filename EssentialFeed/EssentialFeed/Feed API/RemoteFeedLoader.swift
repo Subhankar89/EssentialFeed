@@ -23,7 +23,7 @@ public final class RemoteFeedLoader {
         self.client = client
     }
     
-    public func load(completion: @escaping (Error) -> Void = { _ in }) {
+    public func load(completion: @escaping (Error) -> Void) {
         // we get the client error, but we complete with
         // our own domain error
         client.get(from: url) { error in
