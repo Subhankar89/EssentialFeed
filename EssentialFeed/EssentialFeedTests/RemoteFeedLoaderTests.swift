@@ -69,6 +69,18 @@ class RemoteFeedLoaderTests: XCTestCase {
         })
     }
     
+    func test_load_deliversNoItemsOn200HTTPPResponseWithEmptyJSONList() {
+
+        let (sut, client) = makeSUT()
+
+        var capturedResults = [RemoteFeedLoader.Result]()
+        sut.load { capturedResults.append($0) }
+        
+        let emptyListJSON = Data(_ : "{\"items\": []}".utf8)
+        client.complete(withStatusCode: 200, data: emptyListJSON)
+        
+        XCTAssertEqual(capturedResults, [.success([])])
+    }
     
     // MARK: Helpers - factory method
     private func makeSUT(url: URL = URL(string: "https://a-given-url.com")!) -> (sut: RemoteFeedLoader, client: HTTPClientSpy) {
@@ -84,14 +96,14 @@ class RemoteFeedLoaderTests: XCTestCase {
         when action: () -> Void,
         file: StaticString = #filePath,
         line: UInt = #line) {
-        
-        var capturedResults = [RemoteFeedLoader.Result]()
-        sut.load { capturedResults.append($0) }
-        
-        action()
-        
+            
+            var capturedResults = [RemoteFeedLoader.Result]()
+            sut.load { capturedResults.append($0) }
+            
+            action()
+            
             XCTAssertEqual(capturedResults, [.failure(error)], file: file, line: line)
-    }
+        }
     
     // test logic moved into a test type which is the spy
     private class HTTPClientSpy: HTTPClient {
