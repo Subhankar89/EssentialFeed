@@ -127,7 +127,7 @@ class RemoteFeedLoaderTests: XCTestCase {
     }
 
     // expect certain result and give it action
-    private func expect(
+    private func expect(  
         _ sut: RemoteFeedLoader,
         toCompleteWith result: RemoteFeedLoader.Result,
         when action: () -> Void,
