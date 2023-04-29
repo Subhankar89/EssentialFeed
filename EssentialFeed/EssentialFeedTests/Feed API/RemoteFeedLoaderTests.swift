@@ -153,14 +153,14 @@ class RemoteFeedLoaderTests: XCTestCase {
     }
 
     // expect certain result and give it action
-    private func expect(  
+    private func expect(
         _ sut: RemoteFeedLoader,
         toCompleteWith expectedResult: RemoteFeedLoader.Result,
         when action: () -> Void,
         file: StaticString = #filePath,
         line: UInt = #line) {
             let exp = expectation(description: "Wait for load description")
-
+            
             sut.load { receivedResult in
                 switch (receivedResult, expectedResult) {
                 case let (.success(receivedItems), .success(expectedItems)):
