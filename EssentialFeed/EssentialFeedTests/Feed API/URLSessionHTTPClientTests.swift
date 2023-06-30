@@ -107,20 +107,19 @@ class URLSessionHTTPClientTests: XCTestCase {
         case let .failure(error):
             return error
         default:
-            XCTFail("Expected failure, got \(result) instead", file: file, line: line)
+            XCTFail("Expected failure, got \(String(describing: result)) instead", file: file, line: line)
             return nil
         }
     }
-
+    
     private func resultValuesFor(data: Data?, response: URLResponse?, error: Error?,
                                  file: StaticString = #filePath, line: UInt = #line) -> (data: Data, response: HTTPURLResponse)? {
         let result = resultFor(data: data, response: response, error: error, file: file, line: line)
-        
         switch result {
         case let .success(data, response):
             return (data, response)
         default:
-            XCTFail("Expected success, got \(result) instead", file: file, line: line)
+            XCTFail("Expected success, got \(String(describing: result)) instead", file: file, line: line)
             return nil
         }
     }
