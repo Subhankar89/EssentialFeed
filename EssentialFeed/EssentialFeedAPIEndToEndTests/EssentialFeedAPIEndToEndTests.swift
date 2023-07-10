@@ -3,7 +3,6 @@
 //  EssentialFeedAPIEndToEndTests
 //
 //  Created by Subhankar Acharya on 08/07/2023.
-//
 
 import XCTest
 import EssentialFeed
@@ -11,20 +10,7 @@ import EssentialFeed
 final class EssentialFeedAPIEndToEndTests: XCTestCase {
     
     func test_endToEndTestServerGETFeedResult_matchesFixedTestAccountData() {
-        let testServerURL = URL(string: "https://essentialdeveloper.com/feed-case-study/test-api/feed")!
-        let client = URLSessionHTTPClient()
-        let loader = RemoteFeedLoader(url: testServerURL, client: client)
-        
-        let exp = expectation(description: "Wait for load completion")
-        
-        var receivedResult: LoadFeedResult?
-        loader.load { result in
-            receivedResult = result
-            exp.fulfill()
-        }
-        wait(for: [exp], timeout: 8.0)
-        
-        switch receivedResult {
+        switch getFeedResult()  {
         case let .success(items)?:
             XCTAssertEqual(items.count, 8, "Expected 8 items in the test account feed")
             
@@ -45,6 +31,26 @@ final class EssentialFeedAPIEndToEndTests: XCTestCase {
     }
     
     // MARK: - Helpers
+    
+    private func getFeedResult(file: StaticString = #filePath, line: UInt = #line) -> LoadFeedResult? {
+        let testServerURL = URL(string: "https://essentialdeveloper.com/feed-case-study/test-api/feed")!
+        let client = URLSessionHTTPClient()
+        let loader = RemoteFeedLoader(url: testServerURL, client: client)
+        trackForMemoryLeaks(client, file: file, line: line)
+        trackForMemoryLeaks(loader, file: file, line: line)
+        
+        
+        let exp = expectation(description: "Wait for load completion")
+        
+        var receivedResult: LoadFeedResult?
+        loader.load { result in
+            receivedResult = result
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 5.0)
+        
+        return receivedResult
+    }
     
     private func expectedItem(at index: Int) -> FeedItem {
         return FeedItem(
