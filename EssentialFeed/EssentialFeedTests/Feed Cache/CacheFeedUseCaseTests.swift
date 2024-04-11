@@ -19,9 +19,10 @@ class LocalFeedLoader {
     
     func save(_ items: [FeedItem], completion: @escaping (Error?) -> Void) {
         store.deleteCachedFeed { [unowned self] error in
-            completion(error)
             if error == nil {
-                self.store.insert(items, timeStamp: self.currentDate())
+                self.store.insert(items, timeStamp: self.currentDate(), completion: completion)
+            } else {
+                completion(error)
             }
         }
     }
@@ -32,6 +33,8 @@ class LocalFeedLoader {
 class FeedStore {
     
     typealias DeletionCompletion = (Error?) -> Void
+    typealias InsertionCompletion = (Error?) -> Void
+    
     
     // as we are using assert equal, we are making the enum Equateable
     enum RecievedMessage: Equatable {
@@ -42,6 +45,7 @@ class FeedStore {
     private(set) var recievedMessages = [RecievedMessage]()
     
     private var deletionCompletions = [DeletionCompletion]()
+    private var insertionCompletions = [InsertionCompletion]()
     
     func deleteCachedFeed(completion: @escaping DeletionCompletion) {
         // capture the completion
@@ -50,7 +54,7 @@ class FeedStore {
         recievedMessages.append(.deleteCachedFeed)
     }
     
-    func completeDeletionWithError(with error: Error, at index: Int = 0) {
+    func completeDeletion(with error: Error, at index: Int = 0) {
         deletionCompletions[index](error)
     }
     
@@ -58,8 +62,17 @@ class FeedStore {
         deletionCompletions[index](nil)
     }
     
-    func insert(_ items: [FeedItem], timeStamp: Date) {
+    func insert(_ items: [FeedItem], timeStamp: Date, completion: @escaping InsertionCompletion) {
+        insertionCompletions.append(completion)
         recievedMessages.append(.insert(items, timeStamp))
+    }
+    
+    func completeInsertion(with error: Error, at index: Int = 0) {
+        insertionCompletions[index](error)
+    }
+    
+    func completeInsertionSuccessfully(at index: Int = 0) {
+        insertionCompletions[index](nil)
     }
 }
 
@@ -92,7 +105,7 @@ final class CacheFeedUseCaseTests: XCTestCase {
         let deletionError = anyNSError()
         
         sut.save(items) { _ in }
-        store.completeDeletionWithError(with: deletionError)
+        store.completeDeletion(with: deletionError)
         
         XCTAssertEqual(store.recievedMessages, [.deleteCachedFeed])
     }
@@ -125,10 +138,56 @@ final class CacheFeedUseCaseTests: XCTestCase {
             exp.fulfill()
         }
         
-        store.completeDeletionWithError(with: deletionError)
+        store.completeDeletion(with: deletionError)
         wait(for: [exp], timeout: 1.0)
         
         XCTAssertEqual(recievedError as NSError?, deletionError)
+    }
+    
+    // fails on insertion
+    func test_save_failsOnInsertionError() {
+        
+        let items = [uniqueItem(), uniqueItem()]
+        let (sut, store) = makeSUT()
+        let insertionError = anyNSError()
+        let exp = expectation(description: "Wait for save comletion")
+        
+        var recievedError: Error?
+        
+        // pass a block as operation is asynchronous
+        sut.save(items) { error in
+            recievedError = error
+            exp.fulfill()
+        }
+        
+        store.completeDeletionSuccessfully()
+        store.completeInsertion(with: insertionError)
+        wait(for: [exp], timeout: 1.0)
+        
+        XCTAssertEqual(recievedError as NSError?, insertionError)
+    }
+    
+    // successful insertion
+    func test_save_succeedsOnSuccessfulCacheInsertion() {
+        
+        let items = [uniqueItem(), uniqueItem()]
+        let (sut, store) = makeSUT()
+        let exp = expectation(description: "Wait for save comletion")
+        
+        var recievedError: Error?
+        
+        // pass a block as operation is asynchronous
+        sut.save(items) { error in
+            recievedError = error
+            exp.fulfill()
+        }
+        
+        store.completeDeletionSuccessfully()
+        store.completeInsertionSuccessfully()
+        
+        wait(for: [exp], timeout: 1.0)
+        
+        XCTAssertNil(recievedError)
     }
     
     // MARK: - Helpers
