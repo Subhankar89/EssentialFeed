@@ -59,7 +59,6 @@ final class CacheFeedUseCaseTests: XCTestCase {
     // deliver deletion error to save method's client
     func test_save_failsOnDeletionError() {
         
-        let items = [uniqueItem(), uniqueItem()]
         let (sut, store) = makeSUT()
         let deletionError = anyNSError()
         
@@ -96,7 +95,7 @@ final class CacheFeedUseCaseTests: XCTestCase {
         let store =  FeedStoreSpy()
         var sut: LocalFeedLoader? = LocalFeedLoader(store: store, currentDate: Date.init)
         
-        var receivedResults = [Error?]()
+        var receivedResults = [LocalFeedLoader.SaveResult]()
         
         // we dont want this completion to be invoked after the instance has been deallocated
         sut?.save([uniqueItem()]) { receivedResults.append($0) }
@@ -111,7 +110,7 @@ final class CacheFeedUseCaseTests: XCTestCase {
         let store =  FeedStoreSpy()
         var sut: LocalFeedLoader? = LocalFeedLoader(store: store, currentDate: Date.init)
         
-        var receivedResults = [Error?]()
+        var receivedResults = [LocalFeedLoader.SaveResult]()
         
         // we dont want this completion to be invoked after the instance has been deallocated
         sut?.save([uniqueItem()]) { receivedResults.append($0) }
