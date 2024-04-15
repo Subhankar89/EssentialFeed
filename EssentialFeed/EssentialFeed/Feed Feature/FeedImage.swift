@@ -1,14 +1,13 @@
 //
-//  LocalFeedItem.swift
+//  FeedItem.swift
 //  EssentialFeed
 //
-//  Created by Subhankar  Acharya on 15/04/24.
+//  Created by Subhankar Acharya on 07/04/2023.
 //
 
 import Foundation
 
-// FeedItem representation for the Cache Module
-public struct LocalFeedItem: Equatable {
+public struct FeedImage: Equatable {
     public let id: UUID
     public let description: String?
     public let location: String?
