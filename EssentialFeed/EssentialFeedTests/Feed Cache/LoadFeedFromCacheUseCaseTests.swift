@@ -32,17 +32,17 @@ final class LoadFeedFromCacheUseCaseTests: XCTestCase {
         let (sut, store) = makeSUT()
         let retirevalError = anyNSError()
         
-        expect(sut, toCompleteWith: .failure(retirevalError)) {
+        expect(sut, toCompleteWith: .failure(retirevalError), when: {
             store.completeRetrieval(with: retirevalError)
-        }
+        })
     }
     
     func test_load_deliversNoImagesOnEmptyCache() {
         let (sut, store) = makeSUT()
         
-        expect(sut, toCompleteWith: .success([])) {
+        expect(sut, toCompleteWith: .success([]), when: {
             store.completeRetrievalWithEmptyCache()
-        }
+        })
     }
     
     func test_load_deliversCachedImagesOnLessThanSevenDaysOldCache() {

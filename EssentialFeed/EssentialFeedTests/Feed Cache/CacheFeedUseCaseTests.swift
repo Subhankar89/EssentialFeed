@@ -60,9 +60,9 @@ final class CacheFeedUseCaseTests: XCTestCase {
         let (sut, store) = makeSUT()
         let deletionError = anyNSError()
         
-        expect(sut, toCompleteWithError: deletionError) {
+        expect(sut, toCompleteWithError: deletionError, when: {
             store.completeDeletion(with: deletionError)
-        }
+        })
     }
     
     // fails on insertion
@@ -71,10 +71,10 @@ final class CacheFeedUseCaseTests: XCTestCase {
         let (sut, store) = makeSUT()
         let insertionError = anyNSError()
         
-        expect(sut, toCompleteWithError: insertionError) {
+        expect(sut, toCompleteWithError: insertionError, when: {
             store.completeDeletionSuccessfully()
             store.completeInsertion(with: insertionError)
-        }
+        })
     }
     
     // successful insertion
@@ -82,10 +82,10 @@ final class CacheFeedUseCaseTests: XCTestCase {
         
         let (sut, store) = makeSUT()
         
-        expect(sut, toCompleteWithError: nil) {
+        expect(sut, toCompleteWithError: nil, when: {
             store.completeDeletionSuccessfully()
             store.completeInsertionSuccessfully()
-        }
+        })
     }
     
     // handle the unwowned self
