@@ -15,7 +15,7 @@ final class CacheFeedUseCaseTests: XCTestCase {
         
         let (_, store) = makeSUT()
         
-        XCTAssertEqual(store.recievedMessages, [])
+        XCTAssertEqual(store.receivedMessages, [])
     }
     
     // calling the save command
@@ -25,7 +25,7 @@ final class CacheFeedUseCaseTests: XCTestCase {
         
         sut.save(uniqueImageFeed().models) { _ in }
         
-        XCTAssertEqual(store.recievedMessages, [.deleteCachedFeed])
+        XCTAssertEqual(store.receivedMessages, [.deleteCachedFeed])
     }
     
     // deleting something if they fail
@@ -37,7 +37,7 @@ final class CacheFeedUseCaseTests: XCTestCase {
         sut.save(uniqueImageFeed().models) { _ in }
         store.completeDeletion(with: deletionError)
         
-        XCTAssertEqual(store.recievedMessages, [.deleteCachedFeed])
+        XCTAssertEqual(store.receivedMessages, [.deleteCachedFeed])
     }
 
     // timestamp on cache insertion
@@ -51,7 +51,7 @@ final class CacheFeedUseCaseTests: XCTestCase {
         store.completeDeletionSuccessfully()
         
         // store to insert local representation of feed items
-        XCTAssertEqual(store.recievedMessages, [.deleteCachedFeed, .insert(feed.local, timeStamp)])
+        XCTAssertEqual(store.receivedMessages, [.deleteCachedFeed, .insert(feed.local, timeStamp)])
     }
     
     // deliver deletion error to save method's client
