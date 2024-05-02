@@ -8,7 +8,7 @@
 import Foundation
 
 // FeedImage representation for the Cache Module
-public struct LocalFeedImage: Equatable, Codable {
+public struct LocalFeedImage: Equatable {
     public let id: UUID
     public let description: String?
     public let location: String?
