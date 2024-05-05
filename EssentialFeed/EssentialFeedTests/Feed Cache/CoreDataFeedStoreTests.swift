@@ -7,29 +7,56 @@
 
 import XCTest
 
-final class CoreDataFeedStoreTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+final class CoreDataFeedStoreTests: XCTestCase, FeedStoreSpecs {
+    
+    func test_retrieve_deliversEmptyOnEmptyCache() {
+        <#code#>
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func test_retrieve_hasNoSideEffectsOnEmptyCache() {
+        <#code#>
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func test_retrieve_deliversFoundValuesOnNonEmptyCache() {
+        <#code#>
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func test_retrieve_hasNoSideEffectsOnNonEmptyCache() {
+        <#code#>
     }
+    
+    func test_insert_deliversNoErrorOnEmptyCache() {
+        <#code#>
+    }
+    
+    func test_insert_deliversNoErrorOnNonEmptyCache() {
+        <#code#>
+    }
+    
+    func test_insert_overridesPreviouslyInsertedCacheValues() {
+        <#code#>
+    }
+    
+    func test_delete_deliversNoErrorOnEmptyCache() {
+        <#code#>
+    }
+    
+    func test_delete_hasNoSideEffectsOnEmptyCache() {
+        <#code#>
+    }
+    
+    func test_delete_deliversNoErrorOnNonEmptyCache() {
+        <#code#>
+    }
+    
+    func test_delete_emptiesPreviouslyInsertedCache() {
+        <#code#>
+    }
+    
+    func test_storeSideEffects_runSerially() {
+        <#code#>
+    }
+    
+
 
 }
