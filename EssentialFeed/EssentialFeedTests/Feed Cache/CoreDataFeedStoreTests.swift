@@ -71,11 +71,15 @@ final class CoreDataFeedStoreTests: XCTestCase, FeedStoreSpecs {
     }
     
     func test_delete_emptiesPreviouslyInsertedCache() {
-        <#code#>
+        let sut = makeSUT()
+        
+        assertThatDeleteEmptiesPreviouslyInsertedCache(on: sut)
     }
     
     func test_storeSideEffects_runSerially() {
-        <#code#>
+        let sut = makeSUT()
+        
+        assertThatSideEffectsRunSerially(on: sut)
     }
     
     // - MARK: Helpers
