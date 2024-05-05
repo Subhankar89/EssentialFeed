@@ -7,11 +7,14 @@
 
 import CoreData
 
- @objc(ManagedCache)
- internal class ManagedCache: NSManagedObject {
-     @NSManaged internal var timestamp: Date
-     @NSManaged internal var feed: NSOrderedSet
+@objc(ManagedCache)
+internal class ManagedCache: NSManagedObject {
+    @NSManaged internal var timestamp: Date
+    @NSManaged internal var feed: NSOrderedSet
+}
 
+extension ManagedCache {
+    
      internal static func find(in context: NSManagedObjectContext) throws -> ManagedCache? {
          let request = NSFetchRequest<ManagedCache>(entityName: entity().name!)
          request.returnsObjectsAsFaults = false
