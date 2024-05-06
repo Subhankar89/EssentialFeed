@@ -138,17 +138,17 @@ final class CacheFeedUseCaseTests: XCTestCase {
                         file: StaticString = #filePath,
                         line: UInt = #line) {
         let exp = expectation(description: "Wait for save comletion")
-        var recievedError: Error?
+        var receivedError: Error?
         
         // pass a block as operation is asynchronous
-        sut.save(uniqueImageFeed().models) { error in
-            recievedError = error
+        sut.save(uniqueImageFeed().models) { result in
+            if case let Result.failure(error) = result { receivedError = error }
             exp.fulfill()
         }
         action()
         wait(for: [exp], timeout: 1.0)
         
-        XCTAssertEqual(recievedError as NSError?, expectedError, file: file, line: line)
+        XCTAssertEqual(receivedError as NSError?, expectedError, file: file, line: line)
     }
     
     private func uniqueImage() -> FeedImage {
