@@ -362,7 +362,7 @@
 		9E4C665E2BEB9E7800F60B2A /* EssentialFeediOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				9E620B662BF5E08B00D37B96 /* FeedViewControllerTests.swift */,
+				9E4F414F2BFB329800017063 /* Controllers */,
 				9E4F41482BFB314700017063 /* Helpers */,
 			);
 			path = EssentialFeediOSTests;
@@ -411,6 +411,14 @@
 				9E4F414D2BFB321200017063 /* UIControl+TestHelpers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9E4F414F2BFB329800017063 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9E620B662BF5E08B00D37B96 /* FeedViewControllerTests.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		9E620B682BF5E3FA00D37B96 /* Frameworks */ = {
