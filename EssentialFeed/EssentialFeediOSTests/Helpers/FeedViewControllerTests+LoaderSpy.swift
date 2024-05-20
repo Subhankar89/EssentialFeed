@@ -5,7 +5,7 @@
 //  Created by Subhankar  Acharya on 20/05/24.
 //
 
-import UIKit
+import Foundation
 import EssentialFeediOS
 import EssentialFeed
 
