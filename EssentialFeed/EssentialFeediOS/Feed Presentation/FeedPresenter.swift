@@ -18,6 +18,7 @@ protocol FeedLoadingView {
 struct FeedViewModel {
     let feed: [FeedImage]
 }
+
 protocol FeedView {
     func display(_ viewModel: FeedViewModel)
 }
