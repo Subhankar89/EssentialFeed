@@ -5,7 +5,6 @@
 //  Created by Subhankar  Acharya on 21/05/24.
 //
 
-import Foundation
 import EssentialFeed
 
 final class FeedImageViewModel<Image> {
