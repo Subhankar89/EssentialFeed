@@ -41,10 +41,11 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     }
     
     private func cancelTask(forRowAt indexPath: IndexPath) {
-        cellControllers[indexPath] = nil    }
+        cellControllers[indexPath] = nil
+    }
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableModel.count
+        tableModel.count
     }
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,7 +61,7 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     }
     
     private func cellController(forRowAt indexPath: IndexPath) -> FeedImageCellController {
-        return tableModel[indexPath.row]
+        tableModel[indexPath.row]
     }
     
     private func removeCellController(forRowAt indexPath: IndexPath) {
