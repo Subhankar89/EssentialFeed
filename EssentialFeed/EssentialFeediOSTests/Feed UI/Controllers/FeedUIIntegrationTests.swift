@@ -214,6 +214,15 @@ final class FeedUIIntegrationTests: XCTestCase {
         XCTAssertEqual(loader.loadedImageURLs, [image0.url, image1.url, image0.url, image1.url], "Expected fourth imageURL request after second view retry action")
     }
     
+    func test_errorView_doesNotRenderErrorOnLoad() {
+        let (sut, _) = makeSUT()
+        
+        sut.loadViewIfNeeded()
+        
+        XCTAssertEqual(sut.errorMessage, nil)
+    }
+    
+    
     func test_feedImageView_preloadsImageURLWhenNearVisible() {
         let image0 = makeImage(url: URL(string: "http://url-0.com")!)
         let image1 = makeImage(url: URL(string: "http://url-1.com")!)
