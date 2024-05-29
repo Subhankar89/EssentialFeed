@@ -91,6 +91,7 @@
 		9EC8279D2C06FEA800731F55 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EC827952C06FA1400731F55 /* Feed.strings */; };
 		9EC8279F2C06FF4900731F55 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC8279E2C06FF4900731F55 /* FeedViewModel.swift */; };
 		9EC827A12C06FF9300731F55 /* FeedLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC827A02C06FF9300731F55 /* FeedLoadingViewModel.swift */; };
+		9EC827A32C06FFC900731F55 /* FeedErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC827A22C06FFC900731F55 /* FeedErrorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,6 +235,7 @@
 		9EC8279B2C06FC2300731F55 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 		9EC8279E2C06FF4900731F55 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		9EC827A02C06FF9300731F55 /* FeedLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoadingViewModel.swift; sourceTree = "<group>"; };
+		9EC827A22C06FFC900731F55 /* FeedErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -620,6 +622,7 @@
 				9EC8279B2C06FC2300731F55 /* FeedPresenter.swift */,
 				9EC8279E2C06FF4900731F55 /* FeedViewModel.swift */,
 				9EC827A02C06FF9300731F55 /* FeedLoadingViewModel.swift */,
+				9EC827A22C06FFC900731F55 /* FeedErrorViewModel.swift */,
 				9EC827952C06FA1400731F55 /* Feed.strings */,
 			);
 			path = "Feed Presentation";
@@ -871,6 +874,7 @@
 				9EC8279F2C06FF4900731F55 /* FeedViewModel.swift in Sources */,
 				32B94B2A29F1405C0032981F /* FeedItemsMapper.swift in Sources */,
 				9E63C6EC2BE7697700525347 /* FeedStore.xcdatamodeld in Sources */,
+				9EC827A32C06FFC900731F55 /* FeedErrorViewModel.swift in Sources */,
 				326DF11129E0308C00723923 /* FeedLoader.swift in Sources */,
 				9E65D1FD2BCCE4B00012C98F /* RemoteFeedItem.swift in Sources */,
 				9EC8279C2C06FC2300731F55 /* FeedPresenter.swift in Sources */,
