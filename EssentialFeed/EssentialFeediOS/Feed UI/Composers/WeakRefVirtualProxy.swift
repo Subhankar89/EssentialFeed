@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import EssentialFeed
 
 final class WeakRefVirtualProxy<T: AnyObject> {
     private weak var object: T?
@@ -26,3 +27,9 @@ extension WeakRefVirtualProxy: FeedImageView where T: FeedImageView, T.Image == 
         object?.display(model)
     }
 }
+
+extension WeakRefVirtualProxy: FeedErrorView where T: FeedErrorView {
+     func display(_ viewModel: FeedErrorViewModel) {
+         object?.display(viewModel)
+     }
+ }
