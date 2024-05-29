@@ -91,6 +91,7 @@
 		9EC827AA2C073E7900731F55 /* UIRefreshControl+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC827A92C073E7900731F55 /* UIRefreshControl+Helpers.swift */; };
 		9EC827AB2C07415400731F55 /* FeedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA390022BFFA2DC00C76ACF /* FeedLocalizationTests.swift */; };
 		9EC827AD2C07440400731F55 /* FeedImagePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC827AC2C07440400731F55 /* FeedImagePresenterTests.swift */; };
+		9EC827AF2C0747B700731F55 /* FeedImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC827AE2C0747B700731F55 /* FeedImagePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -232,6 +233,7 @@
 		9EC827A42C070F4A00731F55 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		9EC827A92C073E7900731F55 /* UIRefreshControl+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Helpers.swift"; sourceTree = "<group>"; };
 		9EC827AC2C07440400731F55 /* FeedImagePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImagePresenterTests.swift; sourceTree = "<group>"; };
+		9EC827AE2C0747B700731F55 /* FeedImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImagePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -607,6 +609,7 @@
 				9EC8279E2C06FF4900731F55 /* FeedViewModel.swift */,
 				9EC827A02C06FF9300731F55 /* FeedLoadingViewModel.swift */,
 				9EC827A22C06FFC900731F55 /* FeedErrorViewModel.swift */,
+				9EC827AE2C0747B700731F55 /* FeedImagePresenter.swift */,
 				9EC827952C06FA1400731F55 /* Feed.strings */,
 			);
 			path = "Feed Presentation";
@@ -871,6 +874,7 @@
 				9EC827A32C06FFC900731F55 /* FeedErrorViewModel.swift in Sources */,
 				326DF11129E0308C00723923 /* FeedLoader.swift in Sources */,
 				9E65D1FD2BCCE4B00012C98F /* RemoteFeedItem.swift in Sources */,
+				9EC827AF2C0747B700731F55 /* FeedImagePresenter.swift in Sources */,
 				9EC8279C2C06FC2300731F55 /* FeedPresenter.swift in Sources */,
 				3214F00829E55E4200D9B6B9 /* RemoteFeedLoader.swift in Sources */,
 				9EC827A12C06FF9300731F55 /* FeedLoadingViewModel.swift in Sources */,
