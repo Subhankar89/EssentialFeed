@@ -90,6 +90,7 @@
 		9EC827A52C070F4A00731F55 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC827A42C070F4A00731F55 /* ErrorView.swift */; };
 		9EC827AA2C073E7900731F55 /* UIRefreshControl+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC827A92C073E7900731F55 /* UIRefreshControl+Helpers.swift */; };
 		9EC827AB2C07415400731F55 /* FeedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA390022BFFA2DC00C76ACF /* FeedLocalizationTests.swift */; };
+		9EC827AD2C07440400731F55 /* FeedImagePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC827AC2C07440400731F55 /* FeedImagePresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +231,7 @@
 		9EC827A22C06FFC900731F55 /* FeedErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorViewModel.swift; sourceTree = "<group>"; };
 		9EC827A42C070F4A00731F55 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		9EC827A92C073E7900731F55 /* UIRefreshControl+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Helpers.swift"; sourceTree = "<group>"; };
+		9EC827AC2C07440400731F55 /* FeedImagePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImagePresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -593,6 +595,7 @@
 			children = (
 				9EA390022BFFA2DC00C76ACF /* FeedLocalizationTests.swift */,
 				9EC827932C06E7F000731F55 /* FeedPresenterTests.swift */,
+				9EC827AC2C07440400731F55 /* FeedImagePresenterTests.swift */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -893,6 +896,7 @@
 				9E6997B52BE216EA0012717F /* CodableFeedStoreTests.swift in Sources */,
 				9E51B2262BE0C64200F928EA /* FeedCacheTestHelpers.swift in Sources */,
 				9EC827AB2C07415400731F55 /* FeedLocalizationTests.swift in Sources */,
+				9EC827AD2C07440400731F55 /* FeedImagePresenterTests.swift in Sources */,
 				9E51B2242BE0BB7E00F928EA /* ValidateFeedCacheUseCaseTests.swift in Sources */,
 				320EA6F229E1864600818F9E /* LoadFeedFromRemoteUseCasesTests.swift in Sources */,
 				9E749CBC2BE651E400564EE5 /* XCTestCase+FailableInsertFeedStoreSpecs.swift in Sources */,
