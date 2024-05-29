@@ -93,6 +93,7 @@
 		9EC827A12C06FF9300731F55 /* FeedLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC827A02C06FF9300731F55 /* FeedLoadingViewModel.swift */; };
 		9EC827A32C06FFC900731F55 /* FeedErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC827A22C06FFC900731F55 /* FeedErrorViewModel.swift */; };
 		9EC827A52C070F4A00731F55 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC827A42C070F4A00731F55 /* ErrorView.swift */; };
+		9EC827A82C073E2800731F55 /* FeedErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC827A72C073E2800731F55 /* FeedErrorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -238,6 +239,7 @@
 		9EC827A02C06FF9300731F55 /* FeedLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoadingViewModel.swift; sourceTree = "<group>"; };
 		9EC827A22C06FFC900731F55 /* FeedErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorViewModel.swift; sourceTree = "<group>"; };
 		9EC827A42C070F4A00731F55 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		9EC827A72C073E2800731F55 /* FeedErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -519,6 +521,7 @@
 				9E4F41662BFD012300017063 /* FeedImagePresenter.swift */,
 				9E4F41682BFD05E500017063 /* FeedViewModel.swift */,
 				9E4F416A2BFD061A00017063 /* FeedLoadingViewModel.swift */,
+				9EC827A72C073E2800731F55 /* FeedErrorViewModel.swift */,
 				9EA38FF92BFF9EC800C76ACF /* Feed.strings */,
 			);
 			path = "Feed Presentation";
@@ -960,6 +963,7 @@
 				9EA390092C00651900C76ACF /* FeedImageDataLoaderPresentationAdapter.swift in Sources */,
 				9E4F41632BFC626E00017063 /* FeedImageViewModel.swift in Sources */,
 				9E4F415B2BFC520500017063 /* FeedImageCellController.swift in Sources */,
+				9EC827A82C073E2800731F55 /* FeedErrorViewModel.swift in Sources */,
 				9EA3900D2C0065C600C76ACF /* FeedViewAdapter.swift in Sources */,
 				9E4F415E2BFC53FD00017063 /* FeedUIComposer.swift in Sources */,
 			);
