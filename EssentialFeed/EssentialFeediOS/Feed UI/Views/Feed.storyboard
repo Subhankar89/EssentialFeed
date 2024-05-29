@@ -15,36 +15,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="o6F-cO-dhV" customClass="ErrorView" customModule="MVVM" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="z6U-HL-2Kc" customClass="ErrorView" customModule="EssentialFeediOS" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIr-PX-tfa">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2v-Jh-uFq">
+                                    <rect key="frame" x="20" y="8" width="353" height="16"/>
+                                    <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <inset key="contentEdgeInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
-                                    <state key="normal" title="Error label">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                </button>
+                                    <color key="textColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
-                            <color key="backgroundColor" red="0.99951404330000004" green="0.41759261489999999" blue="0.4154433012" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <gestureRecognizers/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="aIr-PX-tfa" secondAttribute="trailing" id="J0I-31-Lkg"/>
-                                <constraint firstItem="aIr-PX-tfa" firstAttribute="top" secondItem="o6F-cO-dhV" secondAttribute="top" id="VpZ-Zu-QrR"/>
-                                <constraint firstItem="aIr-PX-tfa" firstAttribute="leading" secondItem="o6F-cO-dhV" secondAttribute="leading" id="i7l-Rx-BhH"/>
-                                <constraint firstAttribute="bottom" secondItem="aIr-PX-tfa" secondAttribute="bottom" id="xbd-rl-YgB"/>
+                                <constraint firstItem="i2v-Jh-uFq" firstAttribute="leading" secondItem="z6U-HL-2Kc" secondAttribute="leading" constant="20" symbolic="YES" id="5eK-zS-7Xu"/>
+                                <constraint firstItem="i2v-Jh-uFq" firstAttribute="top" secondItem="z6U-HL-2Kc" secondAttribute="top" constant="8" id="TgN-XI-Wg3"/>
+                                <constraint firstAttribute="trailing" secondItem="i2v-Jh-uFq" secondAttribute="trailing" constant="20" symbolic="YES" id="YCG-0d-xWF"/>
+                                <constraint firstAttribute="bottom" secondItem="i2v-Jh-uFq" secondAttribute="bottom" constant="20" symbolic="YES" id="sgE-4A-wJc"/>
                             </constraints>
+                            <connections>
+                                <outlet property="label" destination="i2v-Jh-uFq" id="nvI-NV-plx"/>
+                            </connections>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="t1a-p4-3dR">
-                            <rect key="frame" x="0.0" y="692" width="393" height="16"/>
+                            <rect key="frame" x="0.0" y="702" width="393" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="580" id="Rt4-oA-KOt" customClass="FeedImageCell" customModule="EssentialFeediOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="84" width="393" height="580"/>
+                                <rect key="frame" x="0.0" y="94" width="393" height="580"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rt4-oA-KOt" id="qb1-iU-UFM">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="580"/>
@@ -162,12 +163,12 @@
                         </connections>
                     </refreshControl>
                     <connections>
-                        <outlet property="errorView" destination="o6F-cO-dhV" id="3dK-FX-qDg"/>
+                        <outlet property="errorView" destination="z6U-HL-2Kc" id="Q19-v7-Vbd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLL-wm-O8v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-160" y="-580"/>
+            <point key="canvasLocation" x="-161.06870229007632" y="-580.28169014084506"/>
         </scene>
     </scenes>
     <resources>
