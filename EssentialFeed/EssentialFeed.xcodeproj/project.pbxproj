@@ -25,7 +25,6 @@
 		9E1B4FA02BD23F50007278E4 /* LoadFeedFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B4F9F2BD23F50007278E4 /* LoadFeedFromCacheUseCaseTests.swift */; };
 		9E1B4FA32BD24215007278E4 /* FeedStoreSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B4FA22BD24215007278E4 /* FeedStoreSpy.swift */; };
 		9E4C665B2BEB9E7800F60B2A /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E4C66532BEB9E7800F60B2A /* EssentialFeediOS.framework */; };
-		9E4F41442BFB305300017063 /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4F41432BFB305300017063 /* FeedImageDataLoader.swift */; };
 		9E4F41472BFB314400017063 /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4F41462BFB314400017063 /* UIImage+TestHelpers.swift */; };
 		9E4F414A2BFB31A100017063 /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4F41492BFB31A100017063 /* UIRefreshControl+TestHelpers.swift */; };
 		9E4F414C2BFB31DE00017063 /* UIButton+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4F414B2BFB31DE00017063 /* UIButton+TestHelpers.swift */; };
@@ -39,6 +38,7 @@
 		9E51B2242BE0BB7E00F928EA /* ValidateFeedCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E51B2232BE0BB7E00F928EA /* ValidateFeedCacheUseCaseTests.swift */; };
 		9E51B2262BE0C64200F928EA /* FeedCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E51B2252BE0C64200F928EA /* FeedCacheTestHelpers.swift */; };
 		9E51B2282BE0C72100F928EA /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E51B2272BE0C72100F928EA /* SharedTestHelpers.swift */; };
+		9E6056872C08735E00DF64DF /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4F41432BFB305300017063 /* FeedImageDataLoader.swift */; };
 		9E620B672BF5E08B00D37B96 /* FeedUIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E620B662BF5E08B00D37B96 /* FeedUIIntegrationTests.swift */; };
 		9E620B692BF5E3FA00D37B96 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326DF0F629E02EB500723923 /* EssentialFeed.framework */; platformFilter = ios; };
 		9E620B6A2BF5E3FA00D37B96 /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 326DF0F629E02EB500723923 /* EssentialFeed.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -357,6 +357,7 @@
 			children = (
 				326DF10E29E02ED300723923 /* FeedImage.swift */,
 				326DF11029E0308C00723923 /* FeedLoader.swift */,
+				9E4F41432BFB305300017063 /* FeedImageDataLoader.swift */,
 			);
 			path = "Feed Feature";
 			sourceTree = "<group>";
@@ -414,7 +415,6 @@
 			isa = PBXGroup;
 			children = (
 				9E4F41422BFB303400017063 /* Feed UI */,
-				9E4F41452BFB305700017063 /* Feed Image Loader */,
 			);
 			path = EssentialFeediOS;
 			sourceTree = "<group>";
@@ -456,14 +456,6 @@
 				9E4F41402BFB301300017063 /* Views */,
 			);
 			path = "Feed UI";
-			sourceTree = "<group>";
-		};
-		9E4F41452BFB305700017063 /* Feed Image Loader */ = {
-			isa = PBXGroup;
-			children = (
-				9E4F41432BFB305300017063 /* FeedImageDataLoader.swift */,
-			);
-			path = "Feed Image Loader";
 			sourceTree = "<group>";
 		};
 		9E4F41482BFB314700017063 /* Helpers */ = {
@@ -869,6 +861,7 @@
 				9EC827A12C06FF9300731F55 /* FeedLoadingViewModel.swift in Sources */,
 				9E63C6EB2BE7696C00525347 /* CoreDataHelpers.swift in Sources */,
 				9E65D1FF2BCCE5210012C98F /* LocalFeedImage.swift in Sources */,
+				9E6056872C08735E00DF64DF /* FeedImageDataLoader.swift in Sources */,
 				9E6AFC202BCA69A1004AB7D8 /* FeedStore.swift in Sources */,
 				9E6AFC1E2BCA68E2004AB7D8 /* LocalFeedLoader.swift in Sources */,
 				32B94B2829F140090032981F /* HTTPClient.swift in Sources */,
@@ -922,7 +915,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E4F41442BFB305300017063 /* FeedImageDataLoader.swift in Sources */,
 				9EC827A52C070F4A00731F55 /* ErrorView.swift in Sources */,
 				9EC827AA2C073E7900731F55 /* UIRefreshControl+Helpers.swift in Sources */,
 				9EC67B472BF89A65005BC957 /* UIView+Shimmering.swift in Sources */,
