@@ -4,7 +4,7 @@
 //
 //  Created by Subhankar Acharya on 08/04/2023.
 //
- 
+
 import XCTest
 import EssentialFeed
 
@@ -13,7 +13,7 @@ class LoadFeedFromRemoteUseCasesTests: XCTestCase {
     func test_init_doesNotRequestedDataFromURL() {
         // create FeedLoader with a client
         let (_, client) = makeSUT()
-    
+        
         XCTAssertTrue(client.requestedURLs.isEmpty)
     }
     
@@ -71,7 +71,7 @@ class LoadFeedFromRemoteUseCasesTests: XCTestCase {
     }
     
     func test_load_deliversNoItemsOn200HTTPPResponseWithEmptyJSONList() {
-
+        
         let (sut, client) = makeSUT()
         
         expect(sut, toCompleteWith: .success([])) {
@@ -85,7 +85,7 @@ class LoadFeedFromRemoteUseCasesTests: XCTestCase {
         
         let item1 = makeItem(id: UUID(),
                              imageURL: URL(string: "https://a-url.com")!)
-
+        
         let item2 = makeItem(id: UUID(),
                              description: "a description",
                              location: "a location",
@@ -127,9 +127,9 @@ class LoadFeedFromRemoteUseCasesTests: XCTestCase {
     }
     
     private func makeItem(id: UUID,
-                  description: String? = nil,
-                  location: String? = nil,
-                  imageURL: URL) -> (model: FeedImage, json: [String: Any]) {
+                          description: String? = nil,
+                          location: String? = nil,
+                          imageURL: URL) -> (model: FeedImage, json: [String: Any]) {
         let item = FeedImage(id: id, description: description, location: location, url: imageURL)
         let json = [
             "id": id.uuidString,
@@ -144,7 +144,7 @@ class LoadFeedFromRemoteUseCasesTests: XCTestCase {
         let json = ["items": items]
         return try! JSONSerialization.data(withJSONObject: json)
     }
-
+    
     // expect certain result and give it action
     private func expect(
         _ sut: RemoteFeedLoader,
@@ -171,14 +171,19 @@ class LoadFeedFromRemoteUseCasesTests: XCTestCase {
     
     // test logic moved into a test type which is the spy
     private class HTTPClientSpy: HTTPClient {
+        private struct Task: HTTPClientTask {
+            func cancel() {}
+        }
+        
         private var messages = [(url: URL, completion: (HTTPClient.Result) -> Void)]()
         
         var requestedURLs: [URL] {
             return messages.map { $0.url }
         }
         
-        func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) {
+        func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
             messages.append((url, completion))
+            return Task()
         }
         
         func complete(with error: Error, at index: Int = 0) {
