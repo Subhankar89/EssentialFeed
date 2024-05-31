@@ -47,6 +47,7 @@ class CoreDataFeedImageDataStoreTests: XCTestCase {
         
         expect(sut, toCompleteRetrievalWith: found(lastStoredData), for: url)
     }
+    
     // - MARK: Helpers
     
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> CoreDataFeedStore {
