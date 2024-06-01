@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "2D858FA8-C5B9-43D1-96E5-0646284937D1",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:EssentialApp.xcodeproj",
+        "identifier" : "9E435AD02C0A05CC00E5B897",
+        "name" : "EssentialAppTests"
+      }
+    }
+  ],
+  "version" : 1
+}
