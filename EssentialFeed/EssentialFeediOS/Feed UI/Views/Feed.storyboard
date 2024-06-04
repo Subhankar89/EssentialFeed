@@ -91,8 +91,8 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7SJ-RC-wPD">
                                                             <rect key="frame" x="0.0" y="0.0" width="353" height="353"/>
-                                                            <accessibility key="accessibilityConfiguration">
-                                                                <bool key="isElement" value="YES"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="feed-image-view">
+                                                                <bool key="isElement" value="NO"/>
                                                             </accessibility>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zU-7s-Asa">
@@ -146,6 +146,9 @@
                                         <constraint firstItem="vmR-t9-1Bv" firstAttribute="top" secondItem="qb1-iU-UFM" secondAttribute="topMargin" priority="999" constant="6" id="wl9-QQ-xHH"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="feed-image-cell">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="2YB-ZJ-zhQ" id="wH2-Pf-Xah"/>
                                     <outlet property="feedImageContainer" destination="Isi-cR-Lpf" id="XYG-ac-fTm"/>
