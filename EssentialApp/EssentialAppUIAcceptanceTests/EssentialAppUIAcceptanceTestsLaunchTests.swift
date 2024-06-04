@@ -1,13 +1,13 @@
 //
-//  EssentialAppUITestsLaunchTests.swift
-//  EssentialAppUITests
+//  EssentialAppUIAcceptanceTestsLaunchTests.swift
+//  EssentialAppUIAcceptanceTests
 //
-//  Created by Subhankar  Acharya on 31/05/24.
+//  Created by Subhankar  Acharya on 04/06/24.
 //
 
 import XCTest
 
-final class EssentialAppUITestsLaunchTests: XCTestCase {
+final class EssentialAppUIAcceptanceTestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

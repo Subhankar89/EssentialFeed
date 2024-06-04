@@ -1,13 +1,13 @@
 //
-//  EssentialAppUITests.swift
-//  EssentialAppUITests
+//  EssentialAppUIAcceptanceTests.swift
+//  EssentialAppUIAcceptanceTests
 //
-//  Created by Subhankar  Acharya on 31/05/24.
+//  Created by Subhankar  Acharya on 04/06/24.
 //
 
 import XCTest
 
-final class EssentialAppUITests: XCTestCase {
+final class EssentialAppUIAcceptanceTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
