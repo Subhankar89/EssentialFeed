@@ -28,6 +28,12 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
         refresh()
     }
     
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        tableView.sizeTableHeaderToFit()
+    }
+    
     @IBAction private func refresh() {
         delegate?.didRequestFeedRefresh()
     }
@@ -67,11 +73,15 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     }
     
     private func cancelCellControllerLoad(forRowAt indexPath: IndexPath) {
-        cellController(forRowAt: indexPath).cancelLoad()
+        cellControllers[indexPath]?.cancelLoad()
+        cellControllers[indexPath] = nil
     }
     
     private func cellController(forRowAt indexPath: IndexPath) -> FeedImageCellController {
-        tableModel[indexPath.row]
+        let controller = tableModel[indexPath.row]
+        cellControllers[indexPath] = controller
+        
+        return controller
     }
     
     private func removeCellController(forRowAt indexPath: IndexPath) {
