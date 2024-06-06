@@ -190,6 +190,7 @@
 		9E51B2272BE0C72100F928EA /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		9E5605642C1186D000A16067 /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
 		9E5605662C11873F00A16067 /* XCTestCase+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Snapshot.swift"; sourceTree = "<group>"; };
+		9E5605682C11FBED00A16067 /* EssentialFeediOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = EssentialFeediOS.xctestplan; path = ../../EssentialFeediOS.xctestplan; sourceTree = "<group>"; };
 		9E573FBC2C10B74000FE6292 /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
 		9E595DF42C101E0600F1E909 /* UITableView+HeaderSizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+HeaderSizing.swift"; sourceTree = "<group>"; };
 		9E6056882C0873D700DF64DF /* LoadFeedImageDataFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedImageDataFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
@@ -311,6 +312,7 @@
 		326DF0EC29E02EB500723923 = {
 			isa = PBXGroup;
 			children = (
+				9E5605682C11FBED00A16067 /* EssentialFeediOS.xctestplan */,
 				9E3097D62BEBA0E200760168 /* EssentialFeedAPIEndToEndTests.xctestplan */,
 				9E4C66682BEBA03100F60B2A /* EssentialFeedCacheIntegrationTests.xctestplan */,
 				32AFA0772A496F6500AAA8CB /* EssentialFeed.xctestplan */,
