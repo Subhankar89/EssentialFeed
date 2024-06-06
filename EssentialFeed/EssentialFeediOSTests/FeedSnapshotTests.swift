@@ -27,6 +27,14 @@ class FeedSnapshotTests: XCTestCase {
         assert(snapshot: sut.snapshot(), named: "FEED_WITH_CONTENT")
     }
     
+    func test_feedWithErrorMessage() {
+        let sut = makeSUT()
+
+        sut.display(.error(message: "This is a\nmulti-line\nerror message"))
+
+        assert(snapshot: sut.snapshot(), named: "FEED_WITH_ERROR_MESSAGE")
+    }
+    
     func test_feedWithFailedImageLoading() {
         let sut = makeSUT()
         
