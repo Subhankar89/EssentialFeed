@@ -21,7 +21,7 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
         didSet { tableView.reloadData() }
     }
     
-    private var cellControllers = [IndexPath: FeedImageCellController]()
+    private var loadingControllers = [IndexPath: FeedImageCellController]()
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +39,7 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     }
     
     public func display(_ cellControllers: [FeedImageCellController]) {
+        loadingControllers = [:]
         tableModel = cellControllers
     }
     
@@ -60,10 +61,6 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
         indexPaths.forEach(cancelCellControllerLoad)
     }
     
-    private func cancelTask(forRowAt indexPath: IndexPath) {
-        cellControllers[indexPath] = nil
-    }
-    
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tableModel.count
     }
@@ -77,18 +74,14 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     }
     
     private func cancelCellControllerLoad(forRowAt indexPath: IndexPath) {
-        cellControllers[indexPath]?.cancelLoad()
-        cellControllers[indexPath] = nil
+        loadingControllers[indexPath]?.cancelLoad()
+        loadingControllers[indexPath] = nil
     }
     
     private func cellController(forRowAt indexPath: IndexPath) -> FeedImageCellController {
         let controller = tableModel[indexPath.row]
-        cellControllers[indexPath] = controller
+        loadingControllers[indexPath] = controller
         
         return controller
-    }
-    
-    private func removeCellController(forRowAt indexPath: IndexPath) {
-        cellControllers[indexPath] = nil
     }
 }
