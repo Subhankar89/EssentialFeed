@@ -310,8 +310,6 @@
 				3214F00729E55E4200D9B6B9 /* RemoteFeedLoader.swift */,
 				32B94B2929F1405C0032981F /* FeedItemsMapper.swift */,
 				9E65D1FC2BCCE4B00012C98F /* RemoteFeedItem.swift */,
-				32B94B2729F140090032981F /* HTTPClient.swift */,
-				3272EF992A46F6B5008202C4 /* URLSessionHTTPClient.swift */,
 				9E60568C2C08A13800DF64DF /* RemoteFeedImageDataLoader.swift */,
 				9E3D11D92C156C260059F7A6 /* RemoteImageCommentsLoaderClass.swift */,
 				9E3D11DB2C156CD90059F7A6 /* ImageCommentsMapper.swift */,
@@ -356,6 +354,8 @@
 			isa = PBXGroup;
 			children = (
 				326DF0F929E02EB500723923 /* EssentialFeed.h */,
+				9E3D11E02C1587960059F7A6 /* Shared API */,
+				9E3D11E12C1587BA0059F7A6 /* Shared API Infra */,
 				9E3D11DD2C1580DB0059F7A6 /* ImageComments Feature */,
 				9E6AFC1C2BCA68BD004AB7D8 /* Feed Cache */,
 				9EC8279A2C06FBDD00731F55 /* Feed Presentation */,
@@ -368,6 +368,8 @@
 		326DF10229E02EB500723923 /* EssentialFeedTests */ = {
 			isa = PBXGroup;
 			children = (
+				9E3D11E22C1587E60059F7A6 /* Shared API */,
+				9E3D11E42C15881A0059F7A6 /* Shared API Infra */,
 				9EC827922C06E57300731F55 /* Feed Presentation */,
 				329631A92A2CCE0700B12324 /* Helpers */,
 				9E04B1EF2BC3A4F4007ABE7D /* Feed Cache */,
@@ -393,7 +395,6 @@
 			children = (
 				329631AA2A2CCE2D00B12324 /* XCTTestCase+MemoeryLeakTracking.swift */,
 				9E51B2272BE0C72100F928EA /* SharedTestHelpers.swift */,
-				9E60568A2C08A07700DF64DF /* HTTPClientSpy.swift */,
 				9E6056922C08A84900DF64DF /* URLProtocolStub.swift */,
 			);
 			path = Helpers;
@@ -411,7 +412,6 @@
 			isa = PBXGroup;
 			children = (
 				320EA6F129E1864600818F9E /* LoadFeedFromRemoteUseCasesTests.swift */,
-				32A8AB132A10F8F5004B5E3F /* URLSessionHTTPClientTests.swift */,
 				9E6056882C0873D700DF64DF /* LoadFeedImageDataFromRemoteUseCaseTests.swift */,
 				9E3D11D72C156B830059F7A6 /* LoadImageCommentsFromRemoteUseCaseTests.swift */,
 			);
@@ -451,6 +451,46 @@
 				9E3D11DE2C1581040059F7A6 /* ImageComment.swift */,
 			);
 			path = "ImageComments Feature";
+			sourceTree = "<group>";
+		};
+		9E3D11E02C1587960059F7A6 /* Shared API */ = {
+			isa = PBXGroup;
+			children = (
+				32B94B2729F140090032981F /* HTTPClient.swift */,
+			);
+			path = "Shared API";
+			sourceTree = "<group>";
+		};
+		9E3D11E12C1587BA0059F7A6 /* Shared API Infra */ = {
+			isa = PBXGroup;
+			children = (
+				3272EF992A46F6B5008202C4 /* URLSessionHTTPClient.swift */,
+			);
+			path = "Shared API Infra";
+			sourceTree = "<group>";
+		};
+		9E3D11E22C1587E60059F7A6 /* Shared API */ = {
+			isa = PBXGroup;
+			children = (
+				9E3D11E32C1587FD0059F7A6 /* Helpers */,
+			);
+			path = "Shared API";
+			sourceTree = "<group>";
+		};
+		9E3D11E32C1587FD0059F7A6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9E60568A2C08A07700DF64DF /* HTTPClientSpy.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9E3D11E42C15881A0059F7A6 /* Shared API Infra */ = {
+			isa = PBXGroup;
+			children = (
+				32A8AB132A10F8F5004B5E3F /* URLSessionHTTPClientTests.swift */,
+			);
+			path = "Shared API Infra";
 			sourceTree = "<group>";
 		};
 		9E4C66542BEB9E7800F60B2A /* EssentialFeediOS */ = {
