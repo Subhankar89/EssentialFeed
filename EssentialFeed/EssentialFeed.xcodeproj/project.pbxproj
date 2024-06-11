@@ -355,7 +355,6 @@
 		326DF10229E02EB500723923 /* EssentialFeedTests */ = {
 			isa = PBXGroup;
 			children = (
-				9E3D11E22C1587E60059F7A6 /* Shared API */,
 				9E3D11E42C15881A0059F7A6 /* Shared API Infra */,
 				9E3D11E62C1588EC0059F7A6 /* Image Comments API */,
 				9EC827922C06E57300731F55 /* Feed Presentation */,
@@ -453,21 +452,6 @@
 				3272EF992A46F6B5008202C4 /* URLSessionHTTPClient.swift */,
 			);
 			path = "Shared API Infra";
-			sourceTree = "<group>";
-		};
-		9E3D11E22C1587E60059F7A6 /* Shared API */ = {
-			isa = PBXGroup;
-			children = (
-				9E3D11E32C1587FD0059F7A6 /* Helpers */,
-			);
-			path = "Shared API";
-			sourceTree = "<group>";
-		};
-		9E3D11E32C1587FD0059F7A6 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		9E3D11E42C15881A0059F7A6 /* Shared API Infra */ = {
