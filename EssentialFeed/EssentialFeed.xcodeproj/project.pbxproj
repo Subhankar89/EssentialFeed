@@ -25,6 +25,7 @@
 		9E3C9F992C2057FD0011A9AC /* ImageCommentsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C9F982C2057FD0011A9AC /* ImageCommentsPresenterTests.swift */; };
 		9E3C9F9C2C20587D0011A9AC /* ImageCommentsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C9F9B2C20587D0011A9AC /* ImageCommentsPresenter.swift */; };
 		9E3C9F9F2C2058AE0011A9AC /* ImageComments.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E3C9F9D2C2058AE0011A9AC /* ImageComments.strings */; };
+		9E3C9FA12C2059A50011A9AC /* ImageCommentsLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C9FA02C2059A50011A9AC /* ImageCommentsLocalizationTests.swift */; };
 		9E3D11DC2C156CD90059F7A6 /* ImageCommentsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3D11DB2C156CD90059F7A6 /* ImageCommentsMapper.swift */; };
 		9E3D11DF2C1581040059F7A6 /* ImageComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3D11DE2C1581040059F7A6 /* ImageComment.swift */; };
 		9E435AA22C099BC600E5B897 /* LoadFeedImageDataFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E435AA12C099BC600E5B897 /* LoadFeedImageDataFromCacheUseCaseTests.swift */; };
@@ -181,6 +182,9 @@
 		9E3C9F982C2057FD0011A9AC /* ImageCommentsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsPresenterTests.swift; sourceTree = "<group>"; };
 		9E3C9F9B2C20587D0011A9AC /* ImageCommentsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsPresenter.swift; sourceTree = "<group>"; };
 		9E3C9F9E2C2058AE0011A9AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ImageComments.strings; sourceTree = "<group>"; };
+		9E3C9FA02C2059A50011A9AC /* ImageCommentsLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsLocalizationTests.swift; sourceTree = "<group>"; };
+		9E3C9FA22C2059BC0011A9AC /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/ImageComments.strings; sourceTree = "<group>"; };
+		9E3C9FA32C2059BD0011A9AC /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/ImageComments.strings"; sourceTree = "<group>"; };
 		9E3D11DB2C156CD90059F7A6 /* ImageCommentsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsMapper.swift; sourceTree = "<group>"; };
 		9E3D11DE2C1581040059F7A6 /* ImageComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageComment.swift; sourceTree = "<group>"; };
 		9E435AA12C099BC600E5B897 /* LoadFeedImageDataFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedImageDataFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
@@ -461,6 +465,7 @@
 			isa = PBXGroup;
 			children = (
 				9E3C9F982C2057FD0011A9AC /* ImageCommentsPresenterTests.swift */,
+				9E3C9FA02C2059A50011A9AC /* ImageCommentsLocalizationTests.swift */,
 			);
 			path = "Image Comments Presentation";
 			sourceTree = "<group>";
@@ -1028,6 +1033,7 @@
 				9E1B4FA02BD23F50007278E4 /* LoadFeedFromCacheUseCaseTests.swift in Sources */,
 				9E435AA22C099BC600E5B897 /* LoadFeedImageDataFromCacheUseCaseTests.swift in Sources */,
 				9E749CB62BE64A9C00564EE5 /* FeedStoreSpecs.swift in Sources */,
+				9E3C9FA12C2059A50011A9AC /* ImageCommentsLocalizationTests.swift in Sources */,
 				32A8AB142A10F8F5004B5E3F /* URLSessionHTTPClientTests.swift in Sources */,
 				9E63C6E12BE74EA300525347 /* CoreDataFeedStoreTests.swift in Sources */,
 				9E749CB82BE64CE900564EE5 /* XCTestCase+FeedStoreSpecs.swift in Sources */,
@@ -1118,6 +1124,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				9E3C9F9E2C2058AE0011A9AC /* en */,
+				9E3C9FA22C2059BC0011A9AC /* el */,
+				9E3C9FA32C2059BD0011A9AC /* pt-PT */,
 			);
 			name = ImageComments.strings;
 			sourceTree = "<group>";
