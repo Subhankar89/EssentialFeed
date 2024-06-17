@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9E435ABF2C0A05CB00E5B897 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E435ABE2C0A05CB00E5B897 /* AppDelegate.swift */; };
 		9E435AC12C0A05CB00E5B897 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E435AC02C0A05CB00E5B897 /* SceneDelegate.swift */; };
-		9E435AC32C0A05CB00E5B897 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E435AC22C0A05CB00E5B897 /* ViewController.swift */; };
 		9E435AC62C0A05CB00E5B897 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9E435AC52C0A05CB00E5B897 /* Base */; };
 		9E435AC82C0A05CC00E5B897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E435AC72C0A05CC00E5B897 /* Assets.xcassets */; };
 		9E435ACB2C0A05CC00E5B897 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9E435ACA2C0A05CC00E5B897 /* Base */; };
@@ -72,7 +71,6 @@
 		9E435ABB2C0A05CB00E5B897 /* EssentialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E435ABE2C0A05CB00E5B897 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E435AC02C0A05CB00E5B897 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9E435AC22C0A05CB00E5B897 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9E435AC52C0A05CB00E5B897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E435AC72C0A05CC00E5B897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E435ACA2C0A05CC00E5B897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 				9E595DFD2C10434A00F1E909 /* FeedImageDataLoaderPresentationAdapter.swift */,
 				9E595DFC2C10434A00F1E909 /* LoadResourcePresentationAdapter.swift */,
 				9E595DFF2C10434A00F1E909 /* FeedViewAdapter.swift */,
-				9E435AC22C0A05CB00E5B897 /* ViewController.swift */,
 				9E5D28752C14BA70008F68E1 /* CombineHelpers.swift */,
 				9E435AC42C0A05CB00E5B897 /* Main.storyboard */,
 				9E435AC72C0A05CC00E5B897 /* Assets.xcassets */,
@@ -315,7 +312,6 @@
 				9E595E032C10434A00F1E909 /* FeedImageDataLoaderPresentationAdapter.swift in Sources */,
 				9E595E022C10434A00F1E909 /* LoadResourcePresentationAdapter.swift in Sources */,
 				9E5D28762C14BA70008F68E1 /* CombineHelpers.swift in Sources */,
-				9E435AC32C0A05CB00E5B897 /* ViewController.swift in Sources */,
 				9E435ABF2C0A05CB00E5B897 /* AppDelegate.swift in Sources */,
 				9E595E012C10434A00F1E909 /* WeakRefVirtualProxy.swift in Sources */,
 				9E595E042C10434A00F1E909 /* FeedUIComposer.swift in Sources */,
