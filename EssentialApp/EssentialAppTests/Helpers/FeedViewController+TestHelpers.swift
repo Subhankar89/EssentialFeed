@@ -10,6 +10,12 @@ import EssentialFeediOS
 
 extension ListViewController {
     
+    public override func loadViewIfNeeded() {
+           super.loadViewIfNeeded()
+
+           tableView.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
+       }
+    
     func simulateFeedImageViewNotNearVisible(at row: Int) {
         simulateFeedImageViewNearVisible(at: row)
         
@@ -60,7 +66,7 @@ extension ListViewController {
     }
     
     func numberOfRenderedFeedImageViews() -> Int {
-        tableView.numberOfRows(inSection: feedImagesSection)
+        tableView.numberOfSections == 0 ? 0 : tableView.numberOfRows(inSection: feedImagesSection)
     }
     
     func feedImageView(at row: Int) -> UITableViewCell? {
