@@ -285,13 +285,13 @@ final class FeedUIIntegrationTests: XCTestCase {
     
     func test_tapOnErrorView_hidesErrorMessage() {
         let (sut, loader) = makeSUT()
-
+        
         sut.loadViewIfNeeded()
         XCTAssertEqual(sut.errorMessage, nil)
-
+        
         loader.completeFeedLoadingWithError(at: 0)
         XCTAssertEqual(sut.errorMessage, loadError)
-
+        
         sut.simulateErrorViewTap()
         XCTAssertEqual(sut.errorMessage, nil)
     }
@@ -386,22 +386,22 @@ final class FeedUIIntegrationTests: XCTestCase {
         wait(for: [exp], timeout: 1.0)
     }
     /*
-    func test_refreshControl() {
-        let sut = FeedViewController()
-        
-        sut.simulateApperance()
-        XCTAssertEqual(sut.refreshControl?.isRefreshing, true)
-        
-        // pull to refersh action
-        sut.refreshControl?.endRefreshing()
-        sut.refreshControl?.sendActions(for: .valueChanged)
-        XCTAssertEqual(sut.refreshControl?.isRefreshing, true)
-        
-        sut.refreshControl?.endRefreshing()
-        sut.simulateApperance()
-        XCTAssertEqual(sut.refreshControl?.isRefreshing, false)
-        
-    }
+     func test_refreshControl() {
+     let sut = FeedViewController()
+     
+     sut.simulateApperance()
+     XCTAssertEqual(sut.refreshControl?.isRefreshing, true)
+     
+     // pull to refersh action
+     sut.refreshControl?.endRefreshing()
+     sut.refreshControl?.sendActions(for: .valueChanged)
+     XCTAssertEqual(sut.refreshControl?.isRefreshing, true)
+     
+     sut.refreshControl?.endRefreshing()
+     sut.simulateApperance()
+     XCTAssertEqual(sut.refreshControl?.isRefreshing, false)
+     
+     }
      */
     
     // MARK: - Helpers
