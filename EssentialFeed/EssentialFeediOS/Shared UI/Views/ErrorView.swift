@@ -8,7 +8,6 @@
 import UIKit
 
 public final class ErrorView: UIButton {
-    @IBOutlet private var label: UILabel!
     
     public var message: String? {
         get { return isVisible ? title(for: .normal) : nil }

@@ -147,12 +147,6 @@
                     </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLL-wm-O8v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="eYd-XH-had" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="gm3-jU-bS0">
-                    <connections>
-                        <action selector="hideMessageAnimated:" destination="eYd-XH-had" id="37f-aT-yaX"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-161.06870229007632" y="-580.28169014084506"/>
         </scene>
