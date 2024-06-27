@@ -20,13 +20,24 @@ public final class ListViewController: UITableViewController, UITableViewDataSou
     
     public var onRefresh: (() -> Void)?
     
+    private var onViewIsAppearing: ((ListViewController) -> Void)?
+    
     private var loadingControllers = [IndexPath: CellController]()
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
         configureTraitCollectionObservers()
-        refresh()
+        onViewIsAppearing = { vc in
+            vc.onViewIsAppearing = nil
+            vc.refresh()
+        }
+    }
+    
+    public override func viewIsAppearing(_ animated: Bool) {
+        super.viewIsAppearing(animated)
+        
+        onViewIsAppearing?(self)
     }
     
     private func configureTraitCollectionObservers() {
